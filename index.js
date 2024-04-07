@@ -11,3 +11,29 @@ const mondayWork = function (workActivity = 'go to the office'){
 }
 mondayWork('work from home')
 
+
+// three
+
+function wrapAdjective(sign) {
+    const part1 = "You are";
+    return function (makeDay = 'special') {
+        if (sign === '*') {      
+          makeDay = 'a hard worker'
+          return `${part1} ${sign}${makeDay}${sign}!`; 
+        } else if (sign === '||') {
+            makeDay = 'a dedicated programmer'
+            return `${part1} ${sign}${makeDay}${sign}!`;
+        } else {
+            return `${part1} ${makeDay}!`;
+        }        
+      };
+    };
+
+console.log(wrapAdjective()());
+
+
+
+
+
+
+
